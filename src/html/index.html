@@ -1,0 +1,23 @@
+{#
+  Nunjucks Templating!
+  Homepage: https://mozilla.github.io/nunjucks/
+  Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% extends 'layouts/application.html' %}
+
+
+{% block content %}
+  {% include "layouts/global/header.html" %}
+
+<main class="main">
+  {% include "layouts/modules/home/hero.html" %}
+  {% include "layouts/modules/pricing-plans.html" %}
+  {% include "layouts/modules/cta-block.html" %}
+  {% include "layouts/modules/contact-us.html" %}
+</main>
+
+{% include "layouts/global/footer.html" %}
+
+
+{% endblock %}

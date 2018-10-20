@@ -1,0 +1,13 @@
+{
+  "name": "pied-piper",
+  "version": "1.0.0",
+  "description": "Front End Developer Technical Test.",
+  "main": "index.js",
+  "repository": "https://github.com/ARXChrono/front-end-test",
+  "author": "Shaun Wong",
+  "license": "MIT",
+  "dependencies": {
+    "blendid": "^4.4.3",
+    "jquery": "^3.3.1"
+  }
+}
