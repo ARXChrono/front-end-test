@@ -1,0 +1,47 @@
+.cta-block {
+  background: linear-gradient(90deg , $base-primary-color, $base-primary-color 50% , $base-secondary-color);
+  h2,
+  p {
+    text-align: center;
+    display: block;
+    color: white;
+  }
+
+  h2 {
+    margin-bottom: 0;
+  }
+
+  p {
+    max-width: 800px;
+    margin: 4rem auto;
+  }
+  .btn.apple {
+    align-items: center;
+    font-size: 18px;
+    text-transform: capitalize;
+    &::before {
+      @include fab-icon;
+      content: "\f179";
+      font-size: 2rem;
+      margin-right: .5rem;
+    }
+  }
+  .btn.google {
+    align-items: center;
+    font-size: 18px;
+    text-transform: capitalize;
+    &::before {
+      @include fab-icon;
+      content: "\f17b";
+      margin-right: .5rem;
+      font-size: 2rem;
+    }
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    @include media-sm-min {
+      align-items: center;
+    }
+  }
+}

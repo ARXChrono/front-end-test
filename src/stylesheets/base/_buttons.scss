@@ -42,6 +42,13 @@
     background: linear-gradient(90deg , $base-primary-color, $base-primary-color 50% , $base-secondary-color);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    // Doesn't seem to work with border-radius?
+    // overflow: hidden;
+    // border: 2px solid transparent;
+    // border-image: linear-gradient(90deg, $base-primary-color, $base-secondary-color);
+    // border-image-slice: 1;
+
     @include ie11 {
       background: none;
       -webkit-text-fill-color: $base-primary-color;
@@ -66,13 +73,13 @@
 
 .btn-group {
   display: flex;
-  @include media-sm-max {
+  @include media-xs-max {
     flex-direction: column;
   }
 
   .btn:first-child {
     margin-right: 1.5rem;
-    @include media-sm-max {
+    @include media-xs-max {
       margin-right: 0;
       margin-bottom: 1rem;
     }

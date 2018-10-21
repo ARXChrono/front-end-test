@@ -54,6 +54,16 @@
   -moz-osx-font-smoothing: grayscale;
   font-weight: 900;
 }
+@mixin fab-icon() {
+  display: inline-block;
+  font: normal normal normal 14px/1 "Font Awesome 5 Brands";
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 900;
+}
+// IE11 Only
 @mixin ie11 {
   @media screen and (min-width:0\0) and (min-resolution:+72dpi) {
     @content;

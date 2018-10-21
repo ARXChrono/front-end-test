@@ -93,6 +93,7 @@
           text-align: left;
           @include media-md-max {
             // width: 50%;
+            justify-content: center;
           }
           @include ie11 {
             width: 100%;
