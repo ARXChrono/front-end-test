@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="home">
+<html class="{% block page %}page{% endblock %}">
   <head>
     <meta charset="utf-8">
     <title>{% block title %}{{ title }}{% endblock %}</title>
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
   </head>
   <body>
-    <aside class="mobile-menu">
+    <aside class="mobile-menu-overlay">
 
     </aside>
     {% block content %}{% endblock %}

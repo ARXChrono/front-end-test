@@ -1,0 +1,80 @@
+.btn {
+  display: inline-flex;
+  border-radius: 4rem;
+  text-transform: uppercase;
+  font-size: 11px;
+  padding: 0.75rem 2.25rem;
+  border: 2px solid white;
+  transition: all 0.27s ease;
+  letter-spacing: 0.05rem;
+  position: relative;
+  overflow: hidden;
+
+  &.solid-white {
+    background-color: white;
+    color: $title-color;
+
+    &:focus,
+    &:hover {
+      background-color: $title-color;
+      border-color: $title-color;
+      color: white;
+    }
+  }
+
+  &.trans-white {
+    color: white;
+    background-color: transparent;
+
+    &:focus,
+    &:hover {
+      border-color: white;
+      background-color: white;
+      color: $title-color;
+    }
+  }
+
+
+  &.gradient-clear {
+    color: $base-primary-color;
+    border: none;
+    box-shadow: 0 0 0px 2px $base-primary-color;
+    background: linear-gradient(90deg , $base-primary-color, $base-primary-color 50% , $base-secondary-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @include ie11 {
+      background: none;
+      -webkit-text-fill-color: $base-primary-color;
+      max-width: 150px;
+    }
+      &:focus,
+      &:hover {
+        border: none;
+        box-shadow: 0 0 0px 0px $base-primary-color;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: white;
+        background: linear-gradient(90deg , $base-primary-color, $base-primary-color 50% , $base-secondary-color);
+        color: white;
+      }
+    }
+
+
+
+
+
+}
+
+.btn-group {
+  display: flex;
+  @include media-sm-max {
+    flex-direction: column;
+  }
+
+  .btn:first-child {
+    margin-right: 1.5rem;
+    @include media-sm-max {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+  }
+}

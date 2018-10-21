@@ -1,0 +1,119 @@
+header nav {
+  margin-left: auto;
+  // Global Styles
+  a {
+    // padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 13px;
+    transition: all 0.27s ease;
+    text-transform: uppercase;
+    font-weight: 400;
+
+    &:focus,
+    &:hover {}
+  }
+  // Top level Only
+  > ul {
+    @include list-unstyled;
+    display: flex;
+    justify-content: space-between;
+    @include media-sm-max {
+      // hide nav in mobile
+      display: none;
+    }
+
+    &:hover li:not(:hover) {
+      opacity: 0.5;
+    }
+
+    > li {
+      display: inline-flex;
+      align-items: center;
+      transition: opacity 0.2s;
+      position: relative;
+      padding: 0 1rem;
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      &.active {}
+
+      &.selected {
+        > a {
+          box-shadow: inset 0 -2px white;
+          margin-top: 0.5rem;
+          padding-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+}
+// Mobile Button toggle
+
+.mobile-menu {
+  display: block;
+  @include media-md-min {
+    display: none;
+  }
+}
+
+
+.mobile-menu-overlay {
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0;
+  position: fixed;
+  width: 100%;
+  height: 150%;
+  top: 0;
+  left: 0;
+  transition: .3s ease;
+
+  @include media-sm-max {
+    .mobile-toggle-active & {
+      // background-color: white;
+      background: linear-gradient(180deg , $base-primary-color, $base-primary-color 50% , $base-secondary-color);
+      pointer-events: all;
+      z-index: 99;
+      opacity: 1;
+      nav {
+        transform: translateY(140px);
+        opacity: 1;
+      }
+    }
+
+  }
+
+  // Mobile Overlay Menu
+  nav {
+    // padding-top: 140px;
+    transform: translateY(0px);
+    opacity: 0;
+    transition: .4s ease;
+    > ul {
+      @include list-unstyled;
+      > li {
+        > a {
+          color: white;
+          padding: 0 0 1rem;
+          display: flex;
+          font-weight: 600;
+          transition: color .27s ease;
+          &:hover, &:focus {
+            color: darken(white, 15%);
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+// .mobile-toggle-active {
+//   overflow: hidden;
+// }

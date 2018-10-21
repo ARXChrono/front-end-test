@@ -1,0 +1,129 @@
+.pricing-plans {
+  background-color: $gray-100;
+
+  h2,
+  p {
+    text-align: center;
+    display: block;
+  }
+
+  h2 {
+    margin-bottom: 0;
+  }
+
+  p {
+    max-width: 800px;
+    margin: 4rem auto;
+    color: $muted-text-color;
+  }
+}
+
+.pricing-tables-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 -15px;
+  @include media-md-max {
+    margin: 0;
+  }
+
+  > .pricing-table-box {
+    background-color: white;
+    flex: 1 1 32%;
+    width: 32%;
+    max-width: 32%;
+    box-shadow: 0 0 10px 1px rgba(black, .015);
+    @include media-md-max {
+      flex: 1 1 100%;
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 2rem;
+    }
+
+
+    .top {
+      background: linear-gradient(90deg , $base-primary-color, $base-primary-color 50% , $base-secondary-color);
+      padding: 2rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      height: 100px;
+
+      span {
+        color: white;
+        text-align: center;
+        width: 100%;
+
+        &.title {
+          text-transform: uppercase;
+          font-size: 18px;
+          display: block;
+        }
+
+        &.pricing {
+          > strong {
+            font-size: 48px;
+            font-weight: 600;
+            letter-spacing: 0.1rem;
+          }
+        }
+      }
+    }
+
+    .bottom {
+      display: flex;
+      flex-direction: column;
+      @include ie11 {
+        align-items: center;
+      }
+      > ul {
+        @include list-unstyled;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 2rem 0;
+
+        > li {
+          display: flex;
+          align-items: center;
+          padding: 1rem 0;
+          width: 60%;
+          margin: 0 auto;
+          text-align: left;
+          @include media-md-max {
+            // width: 50%;
+          }
+          @include ie11 {
+            width: 100%;
+          }
+
+          &::before {
+            margin-right: 2rem;
+          }
+
+          &.tick {
+            &::before {
+              @include fa-icon;
+              content: "\f00c";
+            }
+          }
+
+          &.cross {
+            &::before {
+              @include fa-icon;
+              content: "\f00d";
+            }
+          }
+        }
+      }
+      > a.btn {
+        margin: 0rem auto 2rem;
+
+        @include ie11 {
+
+        }
+      }
+    }
+  }
+}

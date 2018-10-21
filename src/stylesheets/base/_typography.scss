@@ -4,10 +4,7 @@ body {
   @include typi('base');
   font-family: $font-family-base;
   line-height: $base-line-height;
-}
-
-header {
-  font-size: 14px;
+  letter-spacing: 0.03rem;
 }
 
 h1 {
@@ -34,16 +31,24 @@ h6 {
   @include typi('h6');
 }
 
-h1, h2, h3 , h4 , h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $title-font;
   word-wrap: break-word;
   color: $title-color;
+  text-transform: uppercase;
+
   > strong {
     font-family: $title-font;
     font-weight: 600;
   }
 }
 
-p, h1, h2, h3 , h4 , h5, h6  {
-  margin-bottom: 1rem;
+a {
+  text-decoration: none;
+  color: $base-primary-color;
 }

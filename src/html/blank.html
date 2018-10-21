@@ -3,7 +3,7 @@
   Homepage: https://mozilla.github.io/nunjucks/
   Docs: https://mozilla.github.io/nunjucks/api.html
 #}
-
+{% block page %}inner{% endblock %}
 {% extends 'layouts/application.html' %}
 
 
@@ -11,15 +11,10 @@
   {% include "layouts/global/header.html" %}
 
 <main class="main">
-  {% include "layouts/modules/home/hero.html" %}
-  {% include "layouts/modules/pricing-plans.html" %}
-  {% include "layouts/modules/cta-block.html" %}
-  {% include "layouts/modules/contact-us.html" %}
+  {% include "layouts/modules/blank/blank.html" %}
 </main>
 
 {% include "layouts/global/footer.html" %}
 
 
 {% endblock %}
-
-{% block page %}home{% endblock %}
