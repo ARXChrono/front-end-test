@@ -1,5 +1,6 @@
 .cta-block {
   background: linear-gradient(90deg , $base-primary-color, $base-primary-color 50% , $base-secondary-color);
+
   h2,
   p {
     text-align: center;
@@ -8,35 +9,30 @@
   }
 
   h2 {
-    margin-bottom: 0;
+    margin: 0;
   }
 
-  p {
-    max-width: 800px;
-    margin: 4rem auto;
-  }
-  .btn.apple {
+  .btn {
     align-items: center;
     font-size: 18px;
     text-transform: capitalize;
+    justify-content: center;
+
     &::before {
       @include fab-icon;
-      content: "\f179";
+      margin-right: 0.5rem;
       font-size: 2rem;
-      margin-right: .5rem;
     }
-  }
-  .btn.google {
-    align-items: center;
-    font-size: 18px;
-    text-transform: capitalize;
-    &::before {
-      @include fab-icon;
+
+    &.google::before {
       content: "\f17b";
-      margin-right: .5rem;
-      font-size: 2rem;
+    }
+
+    &.apple::before {
+      content: "\f179";
     }
   }
+
   .container {
     display: flex;
     flex-direction: column;

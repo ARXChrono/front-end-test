@@ -8,14 +8,9 @@
   }
 
   h2 {
-    margin-bottom: 0;
+    margin: 0;
   }
 
-  p {
-    max-width: 800px;
-    margin: 4rem auto;
-    color: $muted-text-color;
-  }
 }
 
 .pricing-tables-wrap {
@@ -88,11 +83,10 @@
           display: flex;
           align-items: center;
           padding: 1rem 0;
-          width: 60%;
+          width: 65%;
           margin: 0 auto;
           text-align: left;
           @include media-md-max {
-            // width: 50%;
             justify-content: center;
           }
           @include ie11 {
@@ -120,6 +114,10 @@
       }
       > a.btn {
         margin: 0rem auto 2rem;
+        @include media-xs-max {
+          margin: 0 1rem 2rem;
+          justify-content: center;
+        }
 
         @include ie11 {
 

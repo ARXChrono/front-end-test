@@ -69,6 +69,13 @@
     @content;
   }
 }
+// Safari Only
+@mixin safari {
+  @media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0){
+    @content;
+  }
+}
+
 // Bezier curves
 // transition: transform 1s var(--ease-out-quart);
 //

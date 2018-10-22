@@ -71,7 +71,7 @@ header nav {
   height: 150%;
   top: 0;
   left: 0;
-  transition: .3s ease;
+  transition: .6s ease;
 
   @include media-sm-max {
     .mobile-toggle-active & {
@@ -81,8 +81,9 @@ header nav {
       z-index: 99;
       opacity: 1;
       nav {
-        transform: translateY(140px);
+        transform: translateX(0px);
         opacity: 1;
+        padding: 140px 0 0;
       }
     }
 
@@ -90,10 +91,10 @@ header nav {
 
   // Mobile Overlay Menu
   nav {
-    // padding-top: 140px;
-    transform: translateY(0px);
+    transform: translateX(100px);
     opacity: 0;
     transition: .4s ease;
+    padding: 140px 0 0;
     > ul {
       @include list-unstyled;
       > li {

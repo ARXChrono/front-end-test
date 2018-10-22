@@ -9,6 +9,15 @@
   letter-spacing: 0.05rem;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
+
+  @include media-xs-max {
+    justify-content: center;
+  }
+
+  &.sq {
+    border-radius: 0;
+  }
 
   &.solid-white {
     background-color: white;
@@ -35,7 +44,7 @@
   }
 
 
-  &.gradient-clear {
+  &.trans-gradient {
     color: $base-primary-color;
     border: none;
     box-shadow: 0 0 0px 2px $base-primary-color;
@@ -52,8 +61,17 @@
     @include ie11 {
       background: none;
       -webkit-text-fill-color: $base-primary-color;
+      color: $base-primary-color;
       max-width: 150px;
     }
+
+    @include safari {
+      background: none;
+      -webkit-text-fill-color: $base-primary-color;
+      color: $base-primary-color;
+    }
+
+
       &:focus,
       &:hover {
         border: none;
@@ -66,7 +84,17 @@
     }
 
 
-
+    &.solid-gradient {
+      border: none;
+      box-shadow: 0 0 0px 0px $base-primary-color;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: white;
+      background: linear-gradient(90deg , $base-primary-color, $base-primary-color 50% , $base-secondary-color);
+      color: white;
+      &:hover, &:focus {
+        filter: brightness(1.1);
+      }
+    }
 
 
 }
