@@ -1,7 +1,7 @@
 .DS_Store
 .sass-cache
 .publish
-public
+/public
 dist
 Desktop.ini
 node_modules
