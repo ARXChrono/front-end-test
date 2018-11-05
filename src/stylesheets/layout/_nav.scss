@@ -68,8 +68,8 @@ header nav {
   opacity: 0;
   position: fixed;
   width: 100%;
-  height: 150%;
-  top: 0;
+  height: 100%;
+  top: 110px;
   left: 0;
   transition: .6s ease;
 
@@ -80,10 +80,11 @@ header nav {
       pointer-events: all;
       z-index: 99;
       opacity: 1;
+      overflow: scroll;
+
       nav {
         transform: translateX(0px);
         opacity: 1;
-        padding: 140px 0 0;
       }
     }
 
@@ -91,10 +92,10 @@ header nav {
 
   // Mobile Overlay Menu
   nav {
-    transform: translateX(100px);
+    transform: translateX(50px);
     opacity: 0;
-    transition: .4s ease;
-    padding: 140px 0 0;
+    transition: .6s cubic-bezier(.87,-.41,.19,1.44);
+    padding: 1rem 0 126px; // 110px + 1rem
     > ul {
       @include list-unstyled;
       > li {
@@ -115,6 +116,6 @@ header nav {
 }
 
 
-// .mobile-toggle-active {
-//   overflow: hidden;
-// }
+.mobile-toggle-active {
+  overflow: hidden;
+}

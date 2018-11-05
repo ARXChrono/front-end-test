@@ -41,6 +41,7 @@ h6 {
   word-wrap: break-word;
   color: $title-color;
   text-transform: uppercase;
+  margin: 2rem 0;
 
   > strong {
     font-family: $title-font;
@@ -51,4 +52,8 @@ h6 {
 a {
   text-decoration: none;
   color: $base-primary-color;
+}
+
+hr {
+    margin: 2rem 0;
 }

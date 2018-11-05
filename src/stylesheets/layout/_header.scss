@@ -23,7 +23,8 @@ header {
     .mobile-toggle-active & {
       z-index: 100;
       position: fixed;
-      background: rgba(black, .125);
+      // background: rgba(black, .125);
+      background: rgb(104, 114, 222);
     }
   }
 

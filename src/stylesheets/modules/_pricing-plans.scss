@@ -101,6 +101,7 @@
             &::before {
               @include fa-icon;
               content: "\f00c";
+              font-size: 13px; 
             }
           }
 
