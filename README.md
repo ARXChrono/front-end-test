@@ -1,10 +1,13 @@
 # front-end-test
+
 Front end developer technical test
 
-[View Demo](http://arxchrono.github.io/front-end-test-pub)
+[View Demo](https://shaun-front-end-test.netlify.com)
 
 ## Setup
+
 npm install
 
 ## Run
+
 yarn run blendid

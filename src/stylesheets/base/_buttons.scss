@@ -43,12 +43,16 @@
     }
   }
 
-
   &.trans-gradient {
     color: $base-primary-color;
     border: none;
-    box-shadow: 0 0 0px 2px $base-primary-color;
-    background: linear-gradient(90deg , $base-primary-color, $base-primary-color 50% , $base-secondary-color);
+    box-shadow: inset 0 0 0px 2px $base-primary-color;
+    background: linear-gradient(
+      90deg,
+      $base-primary-color,
+      $base-primary-color 50%,
+      $base-secondary-color
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
@@ -71,32 +75,39 @@
       color: $base-primary-color;
     }
 
-
-      &:focus,
-      &:hover {
-        border: none;
-        box-shadow: 0 0 0px 0px $base-primary-color;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: white;
-        background: linear-gradient(90deg , $base-primary-color, $base-primary-color 50% , $base-secondary-color);
-        color: white;
-      }
-    }
-
-
-    &.solid-gradient {
+    &:focus,
+    &:hover {
       border: none;
-      box-shadow: 0 0 0px 0px $base-primary-color;
+      box-shadow: inset 0 0 0px 0px $base-primary-color;
       -webkit-background-clip: text;
       -webkit-text-fill-color: white;
-      background: linear-gradient(90deg , $base-primary-color, $base-primary-color 50% , $base-secondary-color);
+      background: linear-gradient(
+        90deg,
+        $base-primary-color,
+        $base-primary-color 50%,
+        $base-secondary-color
+      );
       color: white;
-      &:hover, &:focus {
-        filter: brightness(1.1);
-      }
     }
+  }
 
-
+  &.solid-gradient {
+    border: none;
+    box-shadow: 0 0 0px 0px $base-primary-color;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: white;
+    background: linear-gradient(
+      90deg,
+      $base-primary-color,
+      $base-primary-color 50%,
+      $base-secondary-color
+    );
+    color: white;
+    &:hover,
+    &:focus {
+      filter: brightness(1.1);
+    }
+  }
 }
 
 .btn-group {
