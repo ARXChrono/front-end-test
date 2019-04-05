@@ -1,9 +1,9 @@
 version: 2
 jobs:
   build: 
-    working_directory: ~/front-end-test
+    working_directory: ~/front-end-test-ci
     docker:
-      - image: circleci/node:8.11 
+      - image: circleci/node:11.13
     steps: 
       - checkout
       - restore_cache:
@@ -11,7 +11,7 @@ jobs:
 
       - run:
           name: Install Deps
-          command: yarn 
+          command: yarn install
 
        - run:
           name: Run Build
