@@ -1,25 +1,25 @@
 version: 2
 jobs:
-  build: 
-    working_directory: ~/front-end-test-ci
+  build:
     docker:
       - image: circleci/node:11.13
-    steps: 
+
+    working_directory: ~/front-end-test-ci
+
+    steps:
       - checkout
+
       - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
 
-      - run:
-          name: Install Deps
-          command: yarn install
+      - run: yarn install
 
-       - run:
-          name: Run Build
-          command: yarn build
-          
-      - save_cache: 
-          key: dependency-cache-{{ checksum "package.json" }}
+      - save_cache:
           paths:
-            - ./node_modules
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
 
-  
+      - run: yarn build
