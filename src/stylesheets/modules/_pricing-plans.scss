@@ -75,20 +75,11 @@
       align-items: center;
       > ul {
         @include list-unstyled;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
         padding: 2rem 0;
-        width: 80%;
-        @include media-xs-max {
-          width: 100%;
-        }
-
         > li {
           display: flex;
           align-items: center;
           padding: 1rem 0;
-          width: 70%;
           margin: 0 auto;
           text-align: left;
 
