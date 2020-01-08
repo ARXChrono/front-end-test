@@ -4,50 +4,42 @@ header {
   left: 0;
   width: 100%;
   height: 110px;
-  background: linear-gradient(90deg , $base-primary-color, $base-primary-color 50% , $base-secondary-color);
+  background: linear-gradient(
+    90deg,
+    $base-primary-color,
+    $base-primary-color 50%,
+    $base-secondary-color
+  );
   z-index: 2;
-
-  // // Onload fade in
-  // opacity: 0;
-  // transition: opacity 0.4s ease;
-  // .dom-ready & {
-  //   opacity: 1;
-  // }
-
-  // Onscroll
-  .on-scroll-header & {
-
-  }
-
   @include media-sm-max {
     .mobile-toggle-active & {
       z-index: 100;
       position: fixed;
-      // background: rgba(black, .125);
       background: rgb(104, 114, 222);
     }
   }
-
 
   .logo {
     display: flex;
     margin-right: auto;
     a {
       display: inline-flex;
-        img {
+      img {
         height: 50px;
         width: 204px;
         object-fit: contain;
         object-position: left;
-        transition: all .27s ease;
+        transition: all 0.27s ease;
+        @include media-sm-max {
+          width: 170px;
+        }
       }
     }
-
   }
 
   .container {
     display: flex;
     align-items: center;
-    padding: $grid-gutter-width $grid-gutter-width / 2;
+    padding: $grid-gutter-width $grid-gutter-width/2;
   }
 }

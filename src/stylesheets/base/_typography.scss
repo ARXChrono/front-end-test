@@ -1,34 +1,34 @@
 @include typi-init;
 
 body {
-  @include typi('base');
+  @include typi("base");
   font-family: $font-family-base;
   line-height: $base-line-height;
   letter-spacing: 0.03rem;
 }
 
 h1 {
-  @include typi('h1');
+  @include typi("h1");
 }
 
 h2 {
-  @include typi('h2');
+  @include typi("h2");
 }
 
 h3 {
-  @include typi('h3');
+  @include typi("h3");
 }
 
 h4 {
-  @include typi('h4');
+  @include typi("h4");
 }
 
 h5 {
-  @include typi('h5');
+  @include typi("h5");
 }
 
 h6 {
-  @include typi('h6');
+  @include typi("h6");
 }
 
 h1,
@@ -41,7 +41,7 @@ h6 {
   word-wrap: break-word;
   color: $title-color;
   text-transform: uppercase;
-  margin: 2rem 0;
+  margin: 0 0 2rem;
 
   > strong {
     font-family: $title-font;
@@ -55,5 +55,5 @@ a {
 }
 
 hr {
-    margin: 2rem 0;
+  margin: 0 0 2rem;
 }

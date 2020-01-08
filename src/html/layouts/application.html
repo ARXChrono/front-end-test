@@ -1,22 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="{% block page %}page{% endblock %}">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>{% block title %}{{ title }}{% endblock %}</title>
-    <link rel="stylesheet" href="stylesheets/app.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% include "shared/app-icons.html" %}
-    {% block head %}{% endblock %}
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheets/app.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% include "shared/app-icons.html" %} {% block head %}{% endblock %}
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+      integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <aside class="mobile-menu-overlay">
-
+      <div class="container">
+        <nav
+          class="primary-nav"
+          role="navigation"
+          aria-label="Mobile Navigation"
+        >
+          {% include "./global/navigation.html" %}
+        </nav>
+      </div>
     </aside>
-    {% block content %}{% endblock %}
-
-    {% block javascript %}
-      <script src="javascripts/app.js"></script>
+    {% block content %}{% endblock %} {% block javascript %}
+    <script src="javascripts/app.js"></script>
     {% endblock %}
   </body>
 </html>

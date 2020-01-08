@@ -10,64 +10,66 @@
   }
 
   fieldset {
-      border: 0;
-      max-width: 800px;
-      margin: 0 auto;
-      label {
-        display: none;
+    border: 0;
+    max-width: 800px;
+    margin: 0 auto;
+    label {
+      display: none;
+    }
+    p {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin: 0rem;
+      textarea,
+      input[type="text"] {
+        margin-bottom: 1rem;
       }
-      p {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        margin: 0rem;
-        textarea, input[type="text"] {
-          margin-bottom: 2rem;
-          @include media-md-max {
-            margin-bottom: 1rem;
-          }
-        }
-      }
-      .half {
-        width: 350px;
-        @include media-md-max {
-          width: 100%;
-          input[type="text"] {
-            margin-bottom: 2rem;
-          }
-        }
-      }
-      .full {
+    }
+    .half {
+      width: 44.5%;
+      @include media-md-max {
         width: 100%;
       }
-      textarea, input[type="text"] {
-        border: 2px solid $gray-400;
-        padding: 1rem;
-        transition: .27s ease;
-        &:focus {
-          border: 2px solid transparent;
-          border-image: linear-gradient(90deg, $base-primary-color, $base-secondary-color);
-          border-image-slice: 1;
+    }
+    .full {
+      width: 100%;
+    }
+    textarea,
+    input[type="text"] {
+      border: 2px solid $gray-400;
+      padding: 1rem;
+      transition: 0.27s ease;
+      &:focus {
+        border: 2px solid transparent;
+        border-image: linear-gradient(
+          90deg,
+          $base-primary-color,
+          $base-secondary-color
+        );
+        border-image-slice: 1;
 
-          @include safari {
-            border: 2px solid $gray-400; // needs border to have gradient image.
-            border-image: linear-gradient(90deg, $base-primary-color, $base-secondary-color);
-            border-image-slice: 1;
-            box-shadow: none;
-            outline: 0;
-          }
+        @include safari {
+          border: 2px solid $gray-400;
+          border-image: linear-gradient(
+            90deg,
+            $base-primary-color,
+            $base-secondary-color
+          );
+          border-image-slice: 1;
+          box-shadow: none;
+          outline: 0;
         }
       }
+    }
 
-      textarea {
-        height: 180px;
-      }
+    textarea {
+      height: 180px;
+    }
 
-      input[type="submit"] {
-        padding: 1rem;
-        justify-content: center;
-      }
-
+    input[type="submit"] {
+      padding: 1rem;
+      justify-content: center;
+    }
   }
-
 }

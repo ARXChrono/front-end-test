@@ -15,16 +15,16 @@ $black: #3f3f3f;
 $base-primary-color:             #7782fe;
 $base-secondary-color:           #4eb3f7;
 
+$base-primary-color-interact:    #6872de;
+
 // Font Stacks
 $font-family-sans-serif:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 $font-family-monospace:   Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 $font-family-base:        $font-family-sans-serif;
 
 // Theme
-
 $title-font: $font-family-base;
 $title-color: $black;
-
 $muted-text-color: $black;
 $base-font-color: $gray-700;
 $base-font-color-light: $gray-300;
@@ -40,7 +40,6 @@ $container-md:             (940px + $grid-gutter-width)                 !default
 $container-lg:             (1140px + $grid-gutter-width)                !default;
 
 // Media queries breakpoints
-
 $screen-sm-min:            768px                                        !default;
 $screen-md-min:            992px                                        !default;
 $screen-lg-min:            1200px                                       !default;
@@ -89,7 +88,6 @@ $typi: (
 );
 
 // Hamburgers
-
 $hamburger-padding-x:                           0px !default;
 $hamburger-padding-y:                          15px !default;
 $hamburger-layer-width:                        20px !default;

@@ -1,5 +1,10 @@
 .cta-block {
-  background: linear-gradient(90deg , $base-primary-color, $base-primary-color 50% , $base-secondary-color);
+  background: linear-gradient(
+    90deg,
+    $base-primary-color,
+    $base-primary-color 50%,
+    $base-secondary-color
+  );
 
   h2,
   p {
@@ -14,14 +19,21 @@
 
   .btn {
     align-items: center;
-    font-size: 18px;
+    font-size: 16px;
     text-transform: capitalize;
     justify-content: center;
+
+    @include media-xs-max {
+      font-size: 14px;
+    }
 
     &::before {
       @include fab-icon;
       margin-right: 0.5rem;
       font-size: 2rem;
+      @include media-xs-max {
+        font-size: 1rem;
+      }
     }
 
     &.google::before {

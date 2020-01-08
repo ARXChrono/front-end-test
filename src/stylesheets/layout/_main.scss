@@ -5,9 +5,8 @@ body {
   .dom-ready & {
     opacity: 1;
   }
-  // background: linear-gradient(90deg , $base-primary-color, $base-primary-color 50% , $base-secondary-color);
   -webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .main {
@@ -17,13 +16,9 @@ body {
 
 section {
   padding: 4rem 0;
-  // background-color: white;
-  // @include media-sm-max {
-  //   padding: 2rem 0;
-  // }
   p.lead {
     max-width: 800px;
-    margin: 4rem auto;
+    margin: 2rem auto;
     color: $muted-text-color;
     &.light-text {
       color: white;

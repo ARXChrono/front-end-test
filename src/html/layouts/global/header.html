@@ -1,26 +1,17 @@
 <header role="banner">
   <div class="container">
-
-  <div class="logo">
-    <a href="index.html"><img src="images/logo/logo.svg"></a>
-  </div>
-
-  <nav class="primary-nav" role="navigation" aria-label="mainnav">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="blank.html">Features</a></li>
-      <li><a href="#">How It Works</a></li>
-      <li><a href="#">Screenshot</a></li>
-      <li><a href="#">Pricing</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-
-  <div class="hamburger mobile-menu">
-    <div class="hamburger-box hamburger--elastic">
-      <div class="hamburger-inner"></div>
+    <div class="logo">
+      <a href="index.html"><img src="images/logo/logo.svg"/></a>
     </div>
-  </div>
 
+    <nav class="primary-nav" role="navigation" aria-label="Primary Navigation">
+      {% include "./navigation.html" %}
+    </nav>
+
+    <div class="hamburger mobile-menu">
+      <div class="hamburger-box hamburger--elastic">
+        <div class="hamburger-inner"></div>
+      </div>
+    </div>
   </div>
 </header>
