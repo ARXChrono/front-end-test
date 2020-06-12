@@ -8,6 +8,6 @@
   "license": "MIT",
   "dependencies": {
     "blendid": "^4.4.3",
-    "jquery": "^3.3.1"
+    "jquery": "^3.5.0"
   }
 }
